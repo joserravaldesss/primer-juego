@@ -1,0 +1,25 @@
+import random
+numero = random.randint(0, 99)
+intentos = 0
+while True:
+    print("Introduce un número entre 0 y 99:")
+    entrada = input()
+
+    try:
+        adivinanza = int(entrada)
+    except ValueError:
+        print("No has introducido un número válido. Inténtalo de nuevo.")
+        continue
+    intentos += 1
+    if adivinanza == numero:
+    
+        print(f"¡Enhorabuena! Has acertado el número {numero} en {intentos} intentos.")
+        break
+
+    elif adivinanza < numero:
+    
+        print("Te has quedado corto. Prueba un número más alto.")
+    
+    elif adivinanza > numero:
+    
+        print("Te has pasado. Prueba un número más bajo.")
